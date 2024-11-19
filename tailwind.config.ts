@@ -65,7 +65,18 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		}
-  	}
+  	},
+  	container: {
+  		center: true,
+  		padding: '2rem',
+  		screens: {
+  			'2xl': '1400px',
+  			'xl': '1200px',
+  			'lg': '1024px',
+  			'md': '768px',
+  			'sm': '640px',
+  		},
+  	},
   },
   plugins: [require("tailwindcss-animate")],
 };

@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react"
 
 import {
@@ -9,22 +11,32 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
-const CardWithForm = () => {
-  return (
-    <Card className="w-100 h-80 mx-5 my-5 rounded-lg bg-black text-white shadow-lg border-none p-0 transition-all duration-300 hover:scale-105">
-      <CardHeader>
-        <CardTitle className="text-xl font-bold">Project</CardTitle>
-        <CardDescription className="text-sm opacity-75">Project Description</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p className="text-base">Card Content</p>
-      </CardContent>
-      <CardFooter>
-        <p className="text-xs opacity-75">Card Footer</p>
-      </CardFooter>
-    </Card>
-  )
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  technologies: string[];
+  link: string;
 }
 
+const ProjectCard = ({ title, description, technologies, link }: ProjectCardProps) => {
+  return (
+    <Card className="w-full h-auto bg-black text-white shadow-lg border-none p-0 transition-all duration-300 hover:scale-105 cursor-pointer"
+         onClick={() => window.open(link, '_blank')}>
+      <CardHeader>
+        <CardTitle className="text-xl font-bold">{title}</CardTitle>
+        <CardDescription className="text-sm opacity-75">{description}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech, index) => (
+            <span key={index} className="px-2 py-1 bg-white/10 rounded-full text-xs">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
-export default CardWithForm;
+export default ProjectCard;
