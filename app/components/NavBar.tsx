@@ -3,12 +3,12 @@ import React from 'react';
 const NavBar = () => {
     return (
       <nav className="py-4 px-6 flex justify-between items-center">
-        <div className="text-black text-xl font-bold">My Portfolio</div>
+        <div className="text-stone-400 text-xl font-bold"></div>
         <div className="hidden md:block">
-          <a href="#" className="text-black hover:text-white mx-4">Home</a>
-          <a href="#" className="text-black hover:text-white mx-4">About</a>
-          <a href="#" className="text-black hover:text-white mx-4">Projects</a>
-          <a href="#" className="text-black hover:text-white mx-4">Contact</a>
+          <a href="#" className="text-stone-400 hover:text-white mx-4">Home</a>
+          <a href="#" className="text-stone-400 hover:text-white mx-4">About</a>
+          <a href="#" className="text-stone-400 hover:text-white mx-4">Projects</a>
+          <a href="#" className="text-stone-400 hover:text-white mx-4">Contact</a>
         </div>
         <div className="md:hidden">
           <button className="text-white focus:outline-none">

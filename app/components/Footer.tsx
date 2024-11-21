@@ -8,7 +8,6 @@ const Footer = () => {
           <div className="hidden md:block">
             <a href="#" className="text-black hover:text-white mx-4">Info</a>
             <a href="#" className="text-black hover:text-white mx-4">About</a>
-            <a href="#" className="text-black hover:text-white mx-4">Data Collection</a>
           </div>
         </div>
       </footer>
