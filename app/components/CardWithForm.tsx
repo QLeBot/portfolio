@@ -9,7 +9,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-  } from "@/components/ui/card"
+  } from "@/app/components/ui/card"
 
 interface ProjectCardProps {
   title: string;

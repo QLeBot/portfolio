@@ -5,6 +5,7 @@ import CardWithForm from './components/CardWithForm';
 import { GeistSans } from 'geist/font/sans';
 import { Github, Linkedin, Mail } from "lucide-react";
 import ProjectCard from './components/CardWithForm';
+import ViewSwitcher from './components/view-switcher';
 import { 
   FaPython, FaDatabase, FaAws, FaMicrosoft, 
   FaReact, FaHtml5, FaCss3, FaJava, FaSwift, 
@@ -46,6 +47,8 @@ const PortfolioPage = () => {
           </a>
         </div>
       </section>
+
+      <ViewSwitcher />
 
       {/* Experience Section */}
       <section className="w-full flex-grow py-16">
