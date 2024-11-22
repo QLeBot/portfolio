@@ -2,9 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-light {
+    @apply text-stone-200;
+  }
+
+  .text-dark {
+    @apply text-slate-600;
+  }
+
+  .text-darker {
+    @apply text-slate-900;
+  }
+
+  .bg-uni-slate-light {
+    @apply bg-slate-500;
+  }
+  
+  .bg-uni-slate-dark {
+    @apply bg-slate-600;
+  }
+
+  .bg-gradient-dark {
+    @apply bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-600 via-slate-500 to-slate-400;
+  }
+  
+  .bg-gradient-darker {
+    @apply bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-slate-800 to-slate-700;
   }
 }
 

@@ -20,11 +20,11 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, technologies, link }: ProjectCardProps) => {
   return (
-    <Card className="w-full h-auto bg-slate-600 text-white shadow-lg border-none p-0 transition-all duration-300 hover:scale-105 cursor-pointer"
+    <Card className="w-full h-auto bg-uni-slate-light text-white shadow-lg border-none p-0 transition-all duration-300 hover:scale-105 cursor-pointer"
          onClick={() => window.open(link, '_blank')}>
       <CardHeader>
-        <CardTitle className="text-xl font-bold">{title}</CardTitle>
-        <CardDescription className="text-sm opacity-75">{description}</CardDescription>
+        <CardTitle className="text-xl text-light font-bold">{title}</CardTitle>
+        <CardDescription className="text-sm text-light">{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
