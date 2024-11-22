@@ -12,9 +12,11 @@ import {
   FaAndroid 
 } from 'react-icons/fa';
 import { 
-  SiTensorflow, SiPytorch, SiMongodb, SiPostgresql, 
-  SiMysql, SiOracle, SiPowerbi, SiTypescript, 
-  SiJavascript, SiNextdotjs, SiTailwindcss, SiKotlin 
+  SiPython, SiPandas, SiNumpy, SiKeras, SiScikitlearn, SiTensorflow, SiPytorch, 
+  SiMongodb, SiPostgresql, SiMysql, SiOracle, SiApachespark, SiScala, SiDatabricks, SiApachekafka, SiDbt, SiApacheairflow,
+  SiPowerbi, SiQlik, 
+  SiTypescript, SiJavascript, SiNextdotjs, SiTailwindcss, 
+  SiKotlin, SiSwift
 } from 'react-icons/si';
 
 const PortfolioPage = () => {
@@ -53,13 +55,30 @@ const PortfolioPage = () => {
         <div className="mx-auto w-[95%] lg:w-[90%] xl:w-[85%] px-4">
           <h2 className="text-3xl text-light font-bold mb-8">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
             {/* Data Science & AI */}
             <div className="bg-uni-slate-light p-6 rounded-lg shadow-md">
               <h3 className="text-xl text-light font-bold mb-3">Data Science & AI</h3>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center">
-                  <FaPython className="w-8 h-8 text-blue-500" />
+                  <SiPython className="w-8 h-8 text-blue-500" />
                   <span className="text-sm mt-1">Python</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiPandas className="w-8 h-8 text-blue-800" />
+                  <span className="text-sm mt-1">Pandas</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiNumpy className="w-8 h-8 text-blue-600" />
+                  <span className="text-sm mt-1">Numpy</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiScikitlearn className="w-8 h-8 text-orange-500" />
+                  <span className="text-sm mt-1">Scikit-Learn</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiKeras className="w-8 h-8 text-red-500" />
+                  <span className="text-sm mt-1">Keras</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <SiTensorflow className="w-8 h-8 text-orange-500" />
@@ -96,20 +115,30 @@ const PortfolioPage = () => {
                   <SiOracle className="w-8 h-8 text-red-600" />
                   <span className="text-sm mt-1">Oracle</span>
                 </div>
+                <div className="flex flex-col items-center">
+                  <SiApachespark className="w-8 h-8 text-orange-600" />
+                  <span className="text-sm mt-1">PySpark</span>
+                </div>
               </div>
             </div>
 
             {/* Cloud */}
             <div className="bg-uni-slate-light p-6 rounded-lg shadow-md">
               <h3 className="text-xl text-light font-bold mb-3">Cloud</h3>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex flex-col items-center">
-                  <FaMicrosoft className="w-8 h-8 text-blue-500" />
-                  <span className="text-sm mt-1">Azure</span>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col items-start">
+                  <div className="flex items-center gap-2">
+                    <FaMicrosoft className="w-8 h-8 text-blue-500" />
+                    <span className="text-sm">Azure</span>
+                  </div>
+                  <span className="text-xs mt-1 ml-10">Data Factory, Azure SQL Database, Blob Storage</span>
                 </div>
-                <div className="flex flex-col items-center">
-                  <FaAws className="w-8 h-8 text-orange-500" />
-                  <span className="text-sm mt-1">AWS</span>
+                <div className="flex flex-col items-start">
+                  <div className="flex items-center gap-2">
+                    <FaAws className="w-8 h-8 text-orange-500" />
+                    <span className="text-sm">AWS</span>
+                  </div>
+                  <span className="text-xs mt-1 ml-10">S3 Bucket, Lambda</span>
                 </div>
               </div>
             </div>
@@ -120,7 +149,11 @@ const PortfolioPage = () => {
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center">
                   <SiPowerbi className="w-8 h-8 text-yellow-500" />
-                  <span className="text-sm mt-1">Power BI</span>
+                  <span className="text-sm mt-1">PowerBI</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiQlik className="w-8 h-8 text-green-500" />
+                  <span className="text-sm mt-1">QlikSense</span>
                 </div>
               </div>
             </div>
