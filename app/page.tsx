@@ -223,9 +223,11 @@ const PortfolioPage = () => {
           <h2 className="text-3xl text-light font-bold mb-8">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard title="AI Platform" description="Creating a centralized platform for AI models using pay-as-you-go API and running local models" technologies={["Typescript", "Next.js", "React", "Tailwind", "Python", "MongoDB"]} link="/projects/ai-platform" />
-            <ProjectCard title="Faces Dataset Scraping" description="Exploring scraping ThisPersonDoesNotExist for creating a dataset of faces to train model to detect facial features. The intended use is to create a anonymization model and a face swap model." technologies={["Python", "Selenium"]} link="/projects/dataset" />
+            <ProjectCard title="Synthetic Dataset" description="Exploring a mix of techniques to create a synthetic dataset from real data using Data Science, LLM Generative AI and Scraping" technologies={["Python", "Selenium", "Pandas", "OpenAI API"]} link="/projects/dataset" />
+            {/* 
             <ProjectCard title="Football Data Analysis" description="Scraping data from websites and creating a end-to-end data infrastructure with pipelines, queues and dashboards." technologies={["Python", "Selenium", "SQL", "Databricks", "Kafka", "PowerBI"]} link="https://example.com" />
             <ProjectCard title="Project 4" description="Description 4" technologies={["Python", "Pandas", "SQL"]} link="https://example.com" />
+            */}
           </div>
         </div>
       </section>
