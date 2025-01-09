@@ -13,7 +13,7 @@ const AiPlatformPage = () => {
       <section className="flex-grow mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 pt-40 container">
         <h1 className="mb-4 py-8 pt-4 text-7xl text-stone-200 font-bold space-mono-bold">AI Platform</h1>
         <p className="text-xl mb-4 text-stone-200">A comprehensive platform for developing and deploying AI-powered applications</p>
-        <p className="text-lg mb-8 text-stone-200 max-w-2xl">
+        <p className="text-lg mb-8 text-stone-200 max-w-3xl">
           Creating a centralized platform for AI models using pay-as-you-go API and running local models
         </p>
       </section>
@@ -24,9 +24,16 @@ const AiPlatformPage = () => {
           <h2 className="text-3xl text-light font-bold mb-8">Project Context</h2>
           <div className="bg-uni-slate-light p-6 rounded-lg shadow-md">
             <p className="text-light">
-              This project was developed to address the growing need for accessible AI tools
-              and services. It aims to bridge the gap between complex AI technologies and
-              practical business applications.
+              I use and pay for OpenAI ChatGPT plus plan and want to have the ability to only pay for what I use instead of a fixed monthly fee.
+              I also want to run other models from the cloud or local models. The goal is to have a platform that combines the two.
+              The platform is also a great way to have a UI interface for testing and running local models.
+            </p>
+            <br />
+            <p className="text-light">
+              I chose to use Next.js, Typescript and React as the main technologies for the platform because of their flexibility and scalability as well as their freshness.
+              I also chose to use Tailwind for the styling because it is a great way to have a consistent design system.
+              I run some Python code for testing as it is where I am most comfortable.
+              I chose to use MongoDB for the database because it is a great way to have a flexible and scalable database.
             </p>
           </div>
         </div>
@@ -76,6 +83,24 @@ const AiPlatformPage = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Next Steps */}
+      <section className="w-full py-16">
+        <div className="mx-auto w-[95%] lg:w-[90%] xl:w-[85%] px-4">
+          <h2 className="text-3xl text-light font-bold mb-8">Next Steps</h2>
+          <p className="text-light">
+            This project is a work in progress and will continue to evolve.
+          </p>
+          {/* line break */}
+          <br />
+          <ul className="list-disc list-inside space-y-2 text-light">
+            <li>Deploy the platform on a cloud provider</li>
+            <li>Add chat history through integrating a database</li>
+            <li>Add more AI models</li>
+            <li>Work on having local and cloud models at the same time</li>
+          </ul>
         </div>
       </section>
 
