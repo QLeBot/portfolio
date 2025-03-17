@@ -6,8 +6,7 @@ const NavBar = () => {
       <nav className="py-4 px-6 flex justify-between items-center">
         <div className="text-light text-xl font-bold"></div>
         <div className="hidden md:block">
-          <a href="/" className="text-light hover:text-dark mx-4">Home</a>
-          <Link href="/resume" className="text-light hover:text-dark mx-4">Resume</Link>
+          <a href="/CV/CV_Quentin_Lecomte_FR_EN.pdf" download className="text-light hover:text-dark mx-4">Download Resume</a>
         </div>
         <div className="md:hidden">
           <button className="text-white focus:outline-none">

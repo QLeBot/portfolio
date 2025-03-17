@@ -8,8 +8,6 @@ const Footer = () => {
         <div className="flex justify-between items-center">
           <div>&copy; 2024</div>
           <div className="hidden md:block">
-            <a href="#" className="hover:text-dark mx-4">Info</a>
-            <a href="#" className="hover:text-dark mx-4">About</a>
           </div>
         </div>
       </footer>
