@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react"
+import { useRouter } from "next/navigation"
 
 import {
     Card,
@@ -19,9 +20,11 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, technologies, link }: ProjectCardProps) => {
+  const router = useRouter();
+  
   return (
     <Card className="w-full h-auto bg-uni-slate-light text-white shadow-lg border-none p-0 transition-all duration-300 hover:scale-105 cursor-pointer"
-         onClick={() => window.open(link, '_blank')}>
+         onClick={() => router.push(link)}>
       <CardHeader>
         <CardTitle className="text-xl text-light font-bold">{title}</CardTitle>
         <CardDescription className="text-sm text-light">{description}</CardDescription>

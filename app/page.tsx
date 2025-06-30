@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBar from './components/nav-bar';
 import Footer from './components/nav-footer';
+import GradientLoad from './components/gradient-load';
+import LiquidGradient from './components/liquid-gradient';
 import CardWithForm from './components/project-card';
 import { GeistSans } from 'geist/font/sans';
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -23,6 +25,36 @@ const PortfolioPage = () => {
   return (
     <div className="w-full flex flex-col min-h-screen bg-gradient-darker space-mono-regular">
       <NavBar />
+
+      <GradientLoad />
+
+      <LiquidGradient 
+        colors={["#0C090B", "#281A11", "#CAD1DD", "#462D1C", "#E0CDC5", "#3A393E", "#B5BED0", "#584436", "#9AAFC5"]}
+        animated={true} 
+        noiseLevel={0.3}
+        width={640}
+        height={240}
+        rounded={false}
+        className="shadow-2xl absolute top-0 left-40" 
+      />
+
+      {/* Gradient Preview */}
+      <div className="lg:col-span-2">
+        <div
+          className="w-full aspect-[16/9] rounded-3xl shadow-lg"
+          style={{
+          background: `linear-gradient(180deg, 
+          #2d1b0f 0%, 
+          #4a3426 20%, 
+          #6b4d3a 30%, 
+          #8a6b5a 45%, 
+          #a8897a 60%, 
+          #c4a89a 75%, 
+          #dcc7ba 90%, 
+          #f0e6da 100%)`,
+          }}
+        />
+      </div>
       
       {/* Hero Section */}
       <section className="flex-grow mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 pt-40 container">
@@ -222,8 +254,10 @@ const PortfolioPage = () => {
         <div className="mx-auto w-[95%] lg:w-[90%] xl:w-[85%] px-4">
           <h2 className="text-3xl text-light font-bold mb-8">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ProjectCard title="AI Platform" description="Creating a centralized platform for AI models using pay-as-you-go API and running local models" technologies={["Typescript", "Next.js", "React", "Tailwind", "Python", "MongoDB"]} link="/projects/ai-platform" />
-            <ProjectCard title="Synthetic Dataset" description="Exploring a mix of techniques to create a synthetic dataset from real data using Data Science, LLM Generative AI and Scraping" technologies={["Python", "Selenium", "Pandas", "OpenAI API"]} link="/projects/dataset" />
+            <ProjectCard title="Black Scholes Option Pricer" description="An interactive option pricer based on the Black-Scholes model using Python and Streamlit." technologies={["Python", "Streamlit"]} link="./projects/option-pricer" />
+            <ProjectCard title="Implied Volatility" description="An interactive implied volatility calculator using Python and Streamlit." technologies={["Python", "Streamlit"]} link="./projects/implied-volatility" />
+            <ProjectCard title="AI Platform" description="Creating a centralized platform for AI models using pay-as-you-go API and running local models" technologies={["Typescript", "Next.js", "React", "Tailwind", "Python", "MongoDB"]} link="./projects/ai-platform" />
+            <ProjectCard title="Synthetic Dataset" description="Exploring a mix of techniques to create a synthetic dataset from real data using Data Science, LLM Generative AI and Scraping" technologies={["Python", "Selenium", "Pandas", "OpenAI API"]} link="./projects/dataset" />
             {/* 
             <ProjectCard title="Football Data Analysis" description="Scraping data from websites and creating a end-to-end data infrastructure with pipelines, queues and dashboards." technologies={["Python", "Selenium", "SQL", "Databricks", "Kafka", "PowerBI"]} link="https://example.com" />
             <ProjectCard title="Project 4" description="Description 4" technologies={["Python", "Pandas", "SQL"]} link="https://example.com" />
