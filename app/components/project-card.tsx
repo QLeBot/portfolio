@@ -17,10 +17,12 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   link: string;
+  status?: string;
   imageUrl?: string; // Add optional imageUrl prop
+  image?: React.ReactNode; // Add optional image prop
 }
 
-const ProjectCard = ({ title, description, technologies, link, imageUrl }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, technologies, link, status, imageUrl, image }: ProjectCardProps) => {
   const router = useRouter();
   
   return (
@@ -28,7 +30,9 @@ const ProjectCard = ({ title, description, technologies, link, imageUrl }: Proje
          onClick={() => router.push(link)}>
       {/* Image Section */}
       <div className="w-full h-40 bg-gray-200 flex items-center justify-center overflow-hidden rounded-t-md">
-        {imageUrl ? (
+        {image ? (
+          image
+        ) : imageUrl ? (
           <img src={imageUrl} alt={title} className="object-cover w-full h-full" />
         ) : (
           <span className="text-gray-400 text-sm">No image available</span>
@@ -36,6 +40,13 @@ const ProjectCard = ({ title, description, technologies, link, imageUrl }: Proje
       </div>
       <CardHeader>
         <CardTitle className="text-xl text-gray-900 font-bold">{title}</CardTitle>
+        {status && (
+          <div className="flex flex-wrap gap-2">
+            <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">
+              {status}
+            </span>
+          </div>
+        )}
         <CardDescription className="text-sm text-gray-700">{description}</CardDescription>
       </CardHeader>
       <CardContent>
