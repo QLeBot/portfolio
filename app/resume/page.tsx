@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 import { 
   SiPython, SiPandas, SiNumpy, SiKeras, SiScikitlearn, SiTensorflow, SiPytorch, 
-  SiMongodb, SiPostgresql, SiMysql, SiOracle, SiApachespark, SiScala, SiDatabricks, SiApachekafka, SiDbt, SiApacheairflow,
+  SiMongodb, SiPostgresql, SiMysql, SiOracle, SiApachespark, SiScala, SiDatabricks, SiApachekafka, SiDbt, SiApacheairflow,, SiSnowflake 
   SiPowerbi, SiQlik, 
   SiTypescript, SiJavascript, SiNextdotjs, SiTailwindcss, 
   SiKotlin, SiSwift
@@ -47,6 +47,10 @@ const ResumePage = () => {
                 <div className="flex flex-col items-center">
                   <SiPandas className="w-8 h-8 text-blue-800" />
                   <span className="text-sm mt-1 text-gray-700">Pandas</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiPolars className="w-8 h-8 text-blue-800" />
+                  <span className="text-sm mt-1 text-gray-700">Polars</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <SiNumpy className="w-8 h-8 text-blue-600" />
@@ -93,11 +97,19 @@ const ResumePage = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <SiOracle className="w-8 h-8 text-red-600" />
-                  <span className="text-sm mt-1 text-gray-700">Oracle</span>
+                  <span className="text-sm mt-1 text-gray-700">SQL Server</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <SiApachespark className="w-8 h-8 text-orange-600" />
                   <span className="text-sm mt-1 text-gray-700">PySpark</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiSnowflake className="w-8 h-8 text-blue-600" />
+                  <span className="text-sm mt-1 text-gray-700">Snowflake</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <SiDbt className="w-8 h-8 text-orange-600" />
+                  <span className="text-sm mt-1 text-gray-700">dbt</span>
                 </div>
               </div>
             </div>
