@@ -8,7 +8,7 @@ import { ResumeAltSection } from "./components/resume_alt"
 
 export default function PortfolioPage() {
   return (
-    <PageLayout theme="dark" showNav>
+    <PageLayout showNav>
       <HeroSection />
       <AboutSection />
       <ProjectsSection />

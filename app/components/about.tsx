@@ -24,7 +24,7 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[1fr,2fr] gap-12">
           <div>
-            <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-8">
+            <h2 className="text-sm font-medium text-foreground uppercase tracking-wider mb-8">
               About
             </h2>
             <div className="flex gap-4 mt-8">

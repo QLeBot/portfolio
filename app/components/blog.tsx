@@ -30,7 +30,7 @@ export function BlogSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[1fr,2fr] gap-12">
           <div>
-            <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
+            <h2 className="text-sm font-medium text-foreground uppercase tracking-wider mb-4">
               Writing
             </h2>
             <p className="text-muted-foreground">

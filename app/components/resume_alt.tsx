@@ -40,14 +40,35 @@ const experience = [
   },
 ]
 
+const education = [
+  {
+    title: "Master Engineering Degree in Artificial Intelligence",
+    school: "ESME Sudria",
+    year: "2023",
+    description: "Specialized in Artificial Intelligence and Machine Learning",
+  },
+  {
+    title: "International Semester",
+    school: "California State University Monterey Bay",
+    year: "2021",
+    description: "Computer Science",
+  },
+  {
+    title: "Baccalaureat - Scientific",
+    school: "Présentation de Marie HighSchool",
+    year: "2017",
+    description: "Scientific Baccalaureat with mention",
+  },
+]
+
 export function ResumeAltSection() {
   return (
     <section id="resume" className="py-24 px-6 bg-card">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[1fr,2fr] gap-12">
           <div>
-            <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-4">
-              Experience
+            <h2 className="text-sm font-medium text-foreground uppercase tracking-wider mb-4">
+              Resume
             </h2>
             <p className="text-muted-foreground mb-6">
               A summary of my professional journey and the skills I&apos;ve developed along the way.
@@ -60,40 +81,75 @@ export function ResumeAltSection() {
             </Button>
           </div>
           <div className="space-y-12">
-            {experience.map((job) => (
-              <div key={job.title} className="group">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                  <span className="text-sm text-muted-foreground whitespace-nowrap min-w-[140px]">
-                    {job.period}
-                  </span>
-                  <div className="flex-1">
-                    <h3 className="text-foreground font-medium">
-                      {job.title} · {" "}
-                      <a 
-                        href={job.companyUrl}
-                        className="inline-flex items-center gap-1 text-foreground hover:text-accent transition-colors"
-                      >
-                        {job.company}
-                        <ExternalLink className="h-3 w-3" />
-                      </a>
-                    </h3>
-                    <p className="text-muted-foreground mt-2 leading-relaxed">
-                      {job.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {job.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-2 py-1 text-xs rounded bg-secondary text-secondary-foreground"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+            <div>
+              <h3 className="text-sm font-medium text-foreground uppercase tracking-wider mb-6">
+                Experience
+              </h3>
+              <div className="space-y-12">
+                {experience.map((job) => (
+                  <div key={job.title} className="group">
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                      <span className="text-sm text-muted-foreground whitespace-nowrap min-w-[140px]">
+                        {job.period}
+                      </span>
+                      <div className="flex-1">
+                        <h3 className="text-foreground font-medium">
+                          {job.title} ·{" "}
+                          <a 
+                            href={job.companyUrl}
+                            className="inline-flex items-center gap-1 text-foreground hover:text-accent transition-colors"
+                          >
+                            {job.company}
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </h3>
+                        <p className="text-muted-foreground mt-2 leading-relaxed">
+                          {job.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {job.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="px-2 py-1 text-xs rounded bg-secondary text-secondary-foreground"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div>
+              <h3 className="text-sm font-medium text-foreground uppercase tracking-wider mb-6">
+                Education
+              </h3>
+              <div className="space-y-8">
+                {education.map((item) => (
+                  <div key={`${item.title}-${item.school}`} className="group">
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                      <span className="text-sm text-muted-foreground whitespace-nowrap min-w-[140px]">
+                        {item.year}
+                      </span>
+                      <div className="flex-1">
+                        <h3 className="text-foreground font-medium">
+                          {item.title}
+                        </h3>
+                        <p className="text-muted-foreground mt-1">
+                          {item.school}
+                        </p>
+                        <p className="text-muted-foreground mt-2 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

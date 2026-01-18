@@ -6,7 +6,7 @@ import { designTokens } from '@/lib/design-tokens';
 
 const SnowflakePage = () => {
   return (
-    <PageLayout theme="dark">
+    <PageLayout>
       {/* Project Header */}
       <section className={`flex-grow ${designTokens.layout.container} py-10 pt-40`}>
         <h1 className={`mb-4 py-8 pt-4 ${designTokens.typography.heading.h1} ${designTokens.colors.text.light.primary} ${designTokens.typography.font.heading}`}>

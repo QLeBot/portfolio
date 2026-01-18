@@ -2,17 +2,9 @@
 
 import * as React from "react"
 
-interface FooterProps {
-  theme?: 'light' | 'dark';
-}
-
-const Footer = ({ theme = 'light' }: FooterProps) => {
-  const textColor = theme === 'dark' 
-    ? 'text-stone-300' 
-    : 'text-gray-700';
-
+const Footer = () => {
   return (
-    <footer className={`py-8 px-6 mt-auto ${textColor} space-mono-regular`}>
+    <footer className="py-8 px-6 mt-auto text-muted-foreground space-mono-regular">
       <div className="mx-auto w-[95%] lg:w-[90%] xl:w-[85%]">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm">
