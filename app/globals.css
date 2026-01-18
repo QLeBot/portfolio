@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Typography - Space Mono font family */
 .space-mono-regular {
   font-family: "Space Mono", monospace;
   font-weight: 400;
@@ -32,6 +33,8 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Theme-aware text colors */
   .text-light {
     @apply text-stone-200;
   }
@@ -44,6 +47,7 @@
     @apply text-slate-900;
   }
 
+  /* Background utilities */
   .bg-uni-slate-light {
     @apply bg-slate-500;
   }
@@ -59,24 +63,6 @@
   .bg-gradient-darker {
     @apply bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-slate-800 to-slate-700;
   }
-}
-
-/* Heading */
-
-.heading-1 {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black
-}
-
-.heading-2 {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black
-}
-
-.heading-3 {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black
-}
-
-.paragh {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black
 }
 
 

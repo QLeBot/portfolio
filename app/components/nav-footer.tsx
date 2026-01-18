@@ -2,16 +2,29 @@
 
 import * as React from "react"
 
-const Footer = () => {
-    return (
-      <footer className="py-6 px-6 pt-20 .sticky .bottom-0 text-gray-700">
-        <div className="flex justify-between items-center">
-          <div>&copy; 2024</div>
-          <div className="hidden md:block">
+interface FooterProps {
+  theme?: 'light' | 'dark';
+}
+
+const Footer = ({ theme = 'light' }: FooterProps) => {
+  const textColor = theme === 'dark' 
+    ? 'text-stone-300' 
+    : 'text-gray-700';
+
+  return (
+    <footer className={`py-8 px-6 mt-auto ${textColor} space-mono-regular`}>
+      <div className="mx-auto w-[95%] lg:w-[90%] xl:w-[85%]">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-sm">
+            &copy; {new Date().getFullYear()} Quentin Lecomte
+          </div>
+          <div className="text-sm text-center md:text-right">
+            Data Engineer & AI Specialist
           </div>
         </div>
-      </footer>
-    );
-  };
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

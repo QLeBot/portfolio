@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react';
-import NavBar from '../components/nav-bar';
-import Footer from '../components/nav-footer';
+import PageLayout from '../components/page-layout';
 import ViewSwitcher from '../components/view-switcher';
+import { designTokens } from '@/lib/design-tokens';
 import { 
   FaPython, FaDatabase, FaAws, FaMicrosoft, 
   FaReact, FaHtml5, FaCss3, FaJava, FaSwift, 
@@ -19,26 +19,29 @@ import {
 
 const ResumePage = () => {
   return (
-    <div className="w-full flex flex-col min-h-screen bg-white space-mono-regular">
-      <NavBar />
-      
+    <PageLayout theme="light">
       {/* Hero Section */}
-      <section className="flex-grow mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 pt-40 container">
-        <h1 className="mb-4 py-8 pt-4 text-7xl text-gray-900 font-bold space-mono-bold">Resume</h1>
-        <p className="text-lg mb-8 text-gray-700 max-w-2xl">
+      <section className={`flex-grow ${designTokens.layout.container} py-10 pt-40`}>
+        <h1 className={`mb-4 py-8 pt-4 ${designTokens.typography.heading.h1} ${designTokens.colors.text.primary} ${designTokens.typography.font.heading}`}>
+          Resume
+        </h1>
+        <p className={`${designTokens.typography.body.base} mb-8 ${designTokens.colors.text.secondary} max-w-2xl`}>
           My professional experience and technical skills in Data Engineering, Data Science, and Cloud technologies.
         </p>
       </section>
 
       {/* Skills Section */}
-      <section className="w-full py-16">
-        <div className="mx-auto w-[95%] lg:w-[90%] xl:w-[85%] px-4">
-          <h2 className="text-3xl text-gray-900 font-bold mb-8">Skills</h2>
+      <section className={`${designTokens.layout.section} ${designTokens.spacing.section.py}`}>
+        <div className={designTokens.layout.container}>
+          <h2 className={`${designTokens.typography.heading.h2} ${designTokens.colors.text.primary} ${designTokens.typography.font.heading} mb-8`}>
+            Skills
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
             {/* Data Science & AI */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl text-gray-900 font-bold mb-3">Data Science & AI</h3>
+            <div className={`bg-gray-100 p-6 ${designTokens.layout.card.base}`}>
+              <h3 className={`${designTokens.typography.heading.h4} ${designTokens.colors.text.primary} ${designTokens.typography.font.heading} mb-3`}>
+                Data Science & AI
+              </h3>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center">
                   <SiPython className="w-8 h-8 text-blue-500" />
@@ -76,8 +79,10 @@ const ResumePage = () => {
             </div>
 
             {/* Data Engineering */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl text-gray-900 font-bold mb-3">Data Engineering</h3>
+            <div className={`bg-gray-100 p-6 ${designTokens.layout.card.base}`}>
+              <h3 className={`${designTokens.typography.heading.h4} ${designTokens.colors.text.primary} ${designTokens.typography.font.heading} mb-3`}>
+                Data Engineering
+              </h3>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center">
                   <FaDatabase className="w-8 h-8 text-gray-600" />
@@ -115,8 +120,10 @@ const ResumePage = () => {
             </div>
 
             {/* Cloud */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl text-gray-900 font-bold mb-3">Cloud</h3>
+            <div className={`bg-gray-100 p-6 ${designTokens.layout.card.base}`}>
+              <h3 className={`${designTokens.typography.heading.h4} ${designTokens.colors.text.primary} ${designTokens.typography.font.heading} mb-3`}>
+                Cloud
+              </h3>
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col items-start">
                   <div className="flex items-center gap-2">
@@ -136,8 +143,10 @@ const ResumePage = () => {
             </div>
 
             {/* Data Analysis & Visualization */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl text-gray-900 font-bold mb-3">Data Analysis & Visualization</h3>
+            <div className={`bg-gray-100 p-6 ${designTokens.layout.card.base}`}>
+              <h3 className={`${designTokens.typography.heading.h4} ${designTokens.colors.text.primary} ${designTokens.typography.font.heading} mb-3`}>
+                Data Analysis & Visualization
+              </h3>
               <div className="flex flex-wrap gap-4">
                 <div className="flex flex-col items-center">
                   <SiPowerbi className="w-8 h-8 text-yellow-500" />
@@ -154,9 +163,7 @@ const ResumePage = () => {
       </section>
 
       <ViewSwitcher />
-
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 
